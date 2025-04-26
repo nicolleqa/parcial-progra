@@ -14,6 +14,12 @@ namespace parcial.Controllers
             _context = context;
         }
 
+        public IActionResult Listar()
+        {
+            var players = _context.Players.ToList();
+            return View(players);
+        }
+
         public IActionResult Index()
         {
             return View();
