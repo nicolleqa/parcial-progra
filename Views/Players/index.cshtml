@@ -20,7 +20,13 @@
     </div>
     <div class="form-group" style="margin-bottom: 15px;">
         <label asp-for="Equipo"></label>
-        <input asp-for="Equipo" class="form-control" />
+        <select asp-for="Equipo" class="form-control">
+            <option value="">Seleccione un equipo</option>
+            @foreach (var equipo in ViewBag.Equipos)
+            {
+                <option value="@equipo.Nombre">@equipo.Nombre</option>
+            }
+        </select>
         <span asp-validation-for="Equipo" class="text-danger"></span>
     </div>
     <button type="submit" class="btn btn-primary">Registrar</button>

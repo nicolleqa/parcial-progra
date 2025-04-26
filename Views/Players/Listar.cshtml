@@ -1,0 +1,27 @@
+@model IEnumerable<parcial.Models.Players>
+
+<h2>Lista de Jugadores</h2>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Nombre</th>
+            <th>Edad</th>
+            <th>Posición</th>
+            <th>Equipo</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var player in Model)
+        {
+            <tr>
+                <td>@player.Id</td>
+                <td>@player.Nombre</td>
+                <td>@player.Edad</td>
+                <td>@player.Posicion</td>
+                <td>@player.Equipo</td>
+            </tr>
+        }
+    </tbody>
+</table>
