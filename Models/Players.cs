@@ -19,5 +19,6 @@ namespace parcial.Models
         [Required(ErrorMessage = "Edad es obligatorios.")]
         public int? Edad { get; set; }
         public string? Posicion { get; set; }
+        public string? Equipo { get; set; }
     }
 }
